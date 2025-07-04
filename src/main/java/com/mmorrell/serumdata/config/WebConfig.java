@@ -1,7 +1,9 @@
 package com.mmorrell.serumdata.config;
 
 import com.mmorrell.serumdata.util.RpcUtil;
+
 import okhttp3.OkHttpClient;
+
 import org.p2p.solanaj.rpc.RpcClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +18,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import java.util.concurrent.TimeUnit;
+
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @EnableWebMvc
 @EnableScheduling
