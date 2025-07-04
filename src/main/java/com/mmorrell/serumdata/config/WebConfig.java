@@ -68,4 +68,12 @@ public class WebConfig implements WebMvcConfigurer {
                 .callTimeout(5, TimeUnit.SECONDS)
                 .build();
     }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")          // 모든 REST 엔드포인트
+                .allowedOrigins("*")        // 개발용: 아무 origin이나 허용
+                .allowedMethods("*")        // GET/POST/PUT/DELETE…
+                .allowedHeaders("*");
+    }
 }
